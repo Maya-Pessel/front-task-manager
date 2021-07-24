@@ -1,0 +1,15 @@
+<div class="centered-content">
+  <div class="modal-box">
+    <h1 class="title">Modifier une liste</h1>
+
+    <input #listTitleInput class="input has-background-light is-medium" type="text" placeholder="Tapez le titre de votre liste ici">
+    <br><br>
+    <div class="buttons field is-grouped is-grouped-right">
+
+      <button routerLink="/" class="button is-light">Annuler</button>
+      <button (click)="updateList(listTitleInput.value)" class="button is-primary has-text-white">Modifier</button>
+
+    </div>
+
+  </div>
+</div>
