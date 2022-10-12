@@ -9,7 +9,7 @@ export class WebRequestService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    this.ROOT_URL = 'http://localhost:3000';
+    this.ROOT_URL = 'http://project-taskmanager.herokuapp.com/';
   }
 
   get(uri: string) {
@@ -38,13 +38,18 @@ export class WebRequestService {
   }
 
   signup(email: string, password: string) {
+
     return this.http.post(`${this.ROOT_URL}/users`, {
       email,
       password
     }, {
       observe: 'response'
     });
+
+    
   }
+
+
 }
 
 
