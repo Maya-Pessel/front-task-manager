@@ -9,7 +9,7 @@ export class WebRequestService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    this.ROOT_URL = 'https://project-taskmanager.herokuapp.com';
+    this.ROOT_URL = 'https://back-task-manager-maya-pessel.vercel.app';
   }
 
   get(uri: string) {
