@@ -15,7 +15,7 @@ export class AuthService {
     return this.webService.login(email, password).pipe(
       shareReplay(),
       tap((res: HttpResponse<any>)=>{
-        this.setSession(res.body._id, res.headers.get('x-access-token'), res.headers.get('x-refresh-token'));
+        this.setSession(res.body._id, res.body.accessToken, res.body.refreshToken);
         console.log('Connecté')
       })
     )
@@ -25,8 +25,8 @@ export class AuthService {
     return this.webService.signup(email, password).pipe(
       shareReplay(),
       tap((res: HttpResponse<any>)=>{
-        this.setSession(res.body._id, res.headers.get('x-access-token'), res.headers.get('x-refresh-token'));
-        console.log('Compte crée')
+        this.setSession(res.body._id, res.body.accessToken, res.body.refreshToken);
+        console.log('Compte créé')
       })
     )
   }
