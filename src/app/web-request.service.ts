@@ -37,11 +37,11 @@ export class WebRequestService {
     });
   }
 
-  logout() {
-    return this.http.post(`${this.ROOT_URL}/users/me/token`, {}, {
-      observe: 'response'
-    });
-  }
+  // logout() {
+  //   return this.http.post(`${this.ROOT_URL}/users/me/token`, {}, {
+  //     observe: 'response'
+  //   });
+  // }
 
   signup(email: string, password: string) {
 
